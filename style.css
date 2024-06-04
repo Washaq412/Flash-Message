@@ -1,0 +1,39 @@
+#flash-message {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    display: none; /* Initially hidden */
+    z-index: 10; /* Ensure it appears above other elements */
+  }
+  
+  .message {
+    margin-bottom: 5px;
+  }
+  
+  .close-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ccc;
+    float: right;
+  }
+  
+  .close-btn:hover {
+    color: #999;
+  }
+  
+  #flash-message.success {
+    background-color: #dff0d8;
+    color: #468847;
+  }
+  
+  #flash-message.error { /* Add styling for error messages (optional) */
+    background-color: #f2dede;
+    color: #a94442;
+  }
+  

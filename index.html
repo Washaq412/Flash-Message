@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flash Message Example</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="flash-message">
+    <p class="message"></p>
+    <button class="close-btn">x</button>
+  </div>
+
+  <script>
+    function showFlashMessage(message) {
+      const flashMessage = document.getElementById("flash-message");
+      const messageElement = flashMessage.querySelector(".message");
+      messageElement.textContent = message;
+      flashMessage.classList.add("success"); // Set success class for styling
+      flashMessage.style.display = "block";
+
+      // Optional: Close button functionality (not implemented here)
+      // const closeButton = flashMessage.querySelector(".close-btn");
+      // closeButton.addEventListener("click", () => {
+      //   flashMessage.style.display = "none";
+      // });
+
+      // Simulate automatic hiding after 3 seconds (for demonstration)
+      setTimeout(() => {
+        flashMessage.style.display = "none";
+      }, 3000);
+    }
+
+    // Example usage: Display a success message on page load
+    showFlashMessage("Your message has been sent successfully!");
+  </script>
+</body>
+</html>
